@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Francis John — Official</title>
+    <meta name="description" content="Official website of Jimmy Francis John — Indian indie artist, vocalist of Pineapple Express. Listen to Nila, Kadhali, Ariya Theeram, and more.">
+    <meta property="og:title" content="Jimmy Francis John — Official">
+    <meta property="og:description" content="Indian indie artist blending soulful melodies with Carnatic fusion. 255K+ monthly listeners on Spotify.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Floating particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav__logo">JFJ</a>
+        <div class="nav__links">
+            <a href="#music" class="nav__link">Music</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#discography" class="nav__link">Discography</a>
+            <a href="#connect" class="nav__link">Connect</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#music" class="mobile-menu__link">Music</a>
+        <a href="#about" class="mobile-menu__link">About</a>
+        <a href="#discography" class="mobile-menu__link">Discography</a>
+        <a href="#connect" class="mobile-menu__link">Connect</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__bg">
+            <div class="hero__gradient-orb hero__gradient-orb--1"></div>
+            <div class="hero__gradient-orb hero__gradient-orb--2"></div>
+            <div class="hero__gradient-orb hero__gradient-orb--3"></div>
+        </div>
+        <div class="hero__content">
+            <div class="hero__subtitle reveal-up">Singer · Songwriter · Vocalist</div>
+            <h1 class="hero__title">
+                <span class="hero__title-line reveal-up" style="--delay: 0.1s">Jimmy</span>
+                <span class="hero__title-line reveal-up" style="--delay: 0.25s">Francis</span>
+                <span class="hero__title-line hero__title-line--accent reveal-up" style="--delay: 0.4s">John</span>
+            </h1>
+            <div class="hero__stats reveal-up" style="--delay: 0.6s">
+                <div class="hero__stat">
+                    <span class="hero__stat-number" data-count="255729">0</span>
+                    <span class="hero__stat-label">Monthly Listeners</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <span class="hero__stat-number" data-count="10347459">0</span>
+                    <span class="hero__stat-label">Total Streams</span>
+                </div>
+            </div>
+            <div class="hero__cta reveal-up" style="--delay: 0.75s">
+                <a href="https://open.spotify.com/artist/0LQFqghLXxYbgbCfTh8y1d" target="_blank" rel="noopener" class="btn btn--primary" id="listenBtn">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                    Listen on Spotify
+                </a>
+                <a href="#music" class="btn btn--ghost">
+                    Explore Music
+                    <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Featured Track Section -->
+    <section class="featured" id="music">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Featured</span>
+                <h2 class="section-title">Now Playing</h2>
+            </div>
+            <div class="featured__player reveal-up" style="--delay: 0.2s">
+                <div class="featured__artwork">
+                    <img src="https://i.scdn.co/image/ab67616d00001e022aa28a4dc1239ebb4dc0f2c1" alt="Nila Album Art" class="featured__artwork-img" loading="lazy">
+                    <div class="featured__artwork-glow"></div>
+                    <div class="featured__vinyl">
+                        <div class="featured__vinyl-inner"></div>
+                    </div>
+                </div>
+                <div class="featured__info">
+                    <div class="featured__tag">Most Popular · 10M+ Streams</div>
+                    <h3 class="featured__track-name">Nila</h3>
+                    <p class="featured__description">
+                        A mesmerizing blend of ethereal melodies and soulful vocals that paints 
+                        the moon ("Nila") in shades of longing and wonder. This breakout track 
+                        captures the essence of Jimmy's artistry — where Carnatic soul meets indie dreamscapes.
+                    </p>
+                    <div class="featured__embed">
+                        <iframe 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/track/0qj4kWzwOSn5gt2hQSE4TW?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="152" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"
+                            title="Nila by Jimmy Francis John on Spotify">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image-col reveal-up">
+                    <div class="about__image-wrapper">
+                        <img src="https://i.scdn.co/image/ab6761610000e5ebbd7e1f0cf1eec668448992d6" alt="Jimmy Francis John" class="about__image" loading="lazy">
+                        <div class="about__image-border"></div>
+                    </div>
+                </div>
+                <div class="about__text-col">
+                    <span class="section-label reveal-up">About</span>
+                    <h2 class="section-title reveal-up" style="--delay: 0.1s">The Sound of<br><em>the Soul</em></h2>
+                    <p class="about__text reveal-up" style="--delay: 0.2s">
+                        Jimmy Francis John is an Indian indie artist and vocalist who weaves together 
+                        the rich tapestry of South Indian musical traditions with contemporary indie-folk 
+                        sensibilities. As a key voice of the Bengaluru-based progressive fusion band 
+                        <strong>Pineapple Express</strong>, he has been at the forefront of India's 
+                        evolving independent music scene.
+                    </p>
+                    <p class="about__text reveal-up" style="--delay: 0.3s">
+                        His solo work transcends language barriers — singing in Tamil, Malayalam, Hindi, 
+                        and beyond — creating intimate, emotionally resonant soundscapes that feel both 
+                        ancient and modern. From the moonlit reverie of <em>"Nila"</em> to the tender 
+                        warmth of <em>"Kadhali"</em>, every song is a journey inward.
+                    </p>
+                    <div class="about__tags reveal-up" style="--delay: 0.4s">
+                        <span class="tag">Indie Folk</span>
+                        <span class="tag">Carnatic Fusion</span>
+                        <span class="tag">Progressive</span>
+                        <span class="tag">Multi-lingual</span>
+                        <span class="tag">Soulful</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section class="discography" id="discography">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Discography</span>
+                <h2 class="section-title">Every Song,<br>a <em>Universe</em></h2>
+            </div>
+            <div class="discography__grid">
+                <!-- Track 1 -->
+                <a href="https://open.spotify.com/track/0qj4kWzwOSn5gt2hQSE4TW" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.1s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e022aa28a4dc1239ebb4dc0f2c1" alt="Nila" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Nila</h4>
+                        <span class="track-card__meta">2022 · 10.3M streams</span>
+                    </div>
+                </a>
+
+                <!-- Track 2 -->
+                <a href="https://open.spotify.com/track/22G7gaLarS2lmRJzO7tHcT" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.15s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02264dd19d23027037b336e03d" alt="En Kadhali" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">En Kadhali</h4>
+                        <span class="track-card__meta">2026 · Single</span>
+                    </div>
+                </a>
+
+                <!-- Track 3 -->
+                <a href="https://open.spotify.com/track/3XYQ8tYGq9MZylc0QoTzLH" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.2s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e026b7102144f46c874487a13d4" alt="Chekkeru Nee" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Chekkeru Nee</h4>
+                        <span class="track-card__meta">2025 · 605K streams</span>
+                    </div>
+                </a>
+
+                <!-- Track 4 -->
+                <a href="https://open.spotify.com/track/1Z8EczZllh8cD1p2q4QR2h" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.25s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e022f6ae713b93f7b651ef8bf73" alt="Ariya Theeram" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Ariya Theeram</h4>
+                        <span class="track-card__meta">2023 · 818K streams</span>
+                    </div>
+                </a>
+
+                <!-- Track 5 -->
+                <a href="https://open.spotify.com/track/7kM7qtVHsoQiyVZosMoGlG" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.3s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e022e40b71d4aaf777610cf83b6" alt="Kadhali (Acoustic)" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Kadhali (Acoustic)</h4>
+                        <span class="track-card__meta">2024 · 595K streams</span>
+                    </div>
+                </a>
+
+                <!-- Track 6 -->
+                <a href="https://open.spotify.com/album/10zDPb5ReINbxrxYmMFFNl" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.35s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02cbc194eac8f0db3f0131f425" alt="Dil" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Dil</h4>
+                        <span class="track-card__meta">2025 · Single</span>
+                    </div>
+                </a>
+
+                <!-- Track 7 -->
+                <a href="https://open.spotify.com/album/6487QP2q98aiA9s3TR7zr0" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.4s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e029110e9eff782d241a655384d" alt="Hridaya" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Hridaya</h4>
+                        <span class="track-card__meta">2025 · Single</span>
+                    </div>
+                </a>
+
+                <!-- Track 8 -->
+                <a href="https://open.spotify.com/album/1BQwtLC7vkmsMA4vHoT85a" target="_blank" rel="noopener" class="track-card reveal-up" style="--delay: 0.45s">
+                    <div class="track-card__art">
+                        <img src="https://i.scdn.co/image/ab67616d00001e026e5b55b087dd93986c3c7e9a" alt="Aasmaan" loading="lazy">
+                        <div class="track-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                    </div>
+                    <div class="track-card__info">
+                        <h4 class="track-card__name">Aasmaan</h4>
+                        <span class="track-card__meta">2024 · Single</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appears On Section -->
+    <section class="appears-on">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-label">Collaborations</span>
+                <h2 class="section-title">Appears On</h2>
+            </div>
+            <div class="appears-on__grid">
+                <a href="https://open.spotify.com/album/3ALcmx4qKx9HkI5JzEs55K" target="_blank" rel="noopener" class="appears-card reveal-up" style="--delay: 0.1s">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02cfbb45ab58be74fbdfb2ef87" alt="777 Charlie Kannada" loading="lazy">
+                    <div class="appears-card__overlay">
+                        <h4>777 Charlie</h4>
+                        <span>Kannada Version</span>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/album/6EJ27wZvxhudyOhmxg4IhN" target="_blank" rel="noopener" class="appears-card reveal-up" style="--delay: 0.15s">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02fc51d8d6041c930444d3ae5d" alt="777 Charlie Malayalam" loading="lazy">
+                    <div class="appears-card__overlay">
+                        <h4>777 Charlie</h4>
+                        <span>Malayalam Version</span>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/album/03N2qhseEiA4pKaYNiOoV1" target="_blank" rel="noopener" class="appears-card reveal-up" style="--delay: 0.2s">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02b878e79923ec60daf755d1d9" alt="Arike" loading="lazy">
+                    <div class="appears-card__overlay">
+                        <h4>Arike</h4>
+                        <span>Soundtrack</span>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/album/4IScdjsOoO4e0YRmNgVgum" target="_blank" rel="noopener" class="appears-card reveal-up" style="--delay: 0.25s">
+                    <img src="https://i.scdn.co/image/ab67616d00001e02d8cfd9693ec2f2200e9231ae" alt="Vaan" loading="lazy">
+                    <div class="appears-card__overlay">
+                        <h4>Vaan</h4>
+                        <span>Soundtrack</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect Section -->
+    <section class="connect" id="connect">
+        <div class="container">
+            <div class="connect__inner">
+                <div class="section-header reveal-up">
+                    <span class="section-label">Connect</span>
+                    <h2 class="section-title">Join the<br><em>Journey</em></h2>
+                </div>
+                <p class="connect__text reveal-up" style="--delay: 0.15s">
+                    Follow Jimmy Francis John across platforms to stay updated on new releases, 
+                    live performances, and behind-the-scenes moments.
+                </p>
+                <div class="connect__links reveal-up" style="--delay: 0.3s">
+                    <a href="https://open.spotify.com/artist/0LQFqghLXxYbgbCfTh8y1d" target="_blank" rel="noopener" class="connect__link">
+                        <div class="connect__link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        </div>
+                        <span class="connect__link-name">Spotify</span>
+                        <span class="connect__link-action">Listen →</span>
+                    </a>
+                    <a href="https://www.instagram.com/jimmyfrancisj/" target="_blank" rel="noopener" class="connect__link">
+                        <div class="connect__link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </div>
+                        <span class="connect__link-name">Instagram</span>
+                        <span class="connect__link-action">Follow →</span>
+                    </a>
+                    <a href="https://www.youtube.com/@jimmyfrancisj" target="_blank" rel="noopener" class="connect__link">
+                        <div class="connect__link-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </div>
+                        <span class="connect__link-name">YouTube</span>
+                        <span class="connect__link-action">Watch →</span>
+                    </a>
+                </div>
+
+                <!-- Spotify Embed: Artist -->
+                <div class="connect__embed reveal-up" style="--delay: 0.45s">
+                    <iframe 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/artist/0LQFqghLXxYbgbCfTh8y1d?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        title="Jimmy Francis John on Spotify">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <span class="footer__logo">JFJ</span>
+                    <span class="footer__copy">© 2026 Jimmy Francis John. All rights reserved.</span>
+                </div>
+                <div class="footer__links">
+                    <a href="https://open.spotify.com/artist/0LQFqghLXxYbgbCfTh8y1d" target="_blank" rel="noopener">Spotify</a>
+                    <a href="https://www.instagram.com/jimmyfrancisj/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.youtube.com/@jimmyfrancisj" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
